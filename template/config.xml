@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+	<name>Website Templates</name>
+	<description>Website Templates from MCom</description>
+	<link>https://mcom.vn/</link>
+	<menu>
+		<main>Menu chính</main>
+	</menu>
+	<banner>
+		<home>Trang chủ</home>
+		<slide>Slide trang chủ</slide>
+		<customer>Khách hàng</customer>
+	</banner>
+</theme>

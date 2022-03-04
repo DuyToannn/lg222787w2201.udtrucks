@@ -1,0 +1,139 @@
+.header{}
+.header__top{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__top-left{}
+
+.header__top-bottom input {
+    background: #c4c4c452;
+    border: unset;
+    border-radius: 3px;
+    padding: 15px 50px 15px 20px;
+    outline: none;
+    width: 430px;
+}
+
+.header__top-bottom form {
+    position: relative;
+}
+.header__top-bottom button {
+    
+    position: absolute;
+    right: 6px;
+    top: 25%;
+    padding: 5px 16px;
+    border: unset;
+    background: #E11428;
+    border-radius: 3px;
+}
+
+.header__top-bottom i {
+    color: #fff;
+}
+
+.header__top-right {
+    margin-right: 30px;
+}
+.right-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-number {
+    display: flex;
+    align-items: center;
+}
+
+.contact-number p {
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.contact-number span i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.header__bottom {
+    height: 65px;
+    background-color: #E11428;
+}
+
+.header__bottom .navbar__bt > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    height: 65px;
+}
+
+.add-cart {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+ .navbar__bt > ul > li > a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+ .navbar__bt > ul > li > a > i{
+    color: #000;
+}
+
+.sub-menu-item > a{
+    color: #000;
+}
+
+.sub-menu-item > a:hover{
+    color: #E11428;
+}
+
+.list-navbar-item {
+    position: relative;
+    transition: all .5s ease;
+}
+
+.list-navbar-item::after {
+    content: '';
+    height: 25px;
+    width: 100%;
+    bottom: -24px;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.list-navbar-item:hover .sub-menu {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 99;
+}
+
+.sub-menu {
+    background: #fff;
+    opacity: 0;
+    right: -70px;
+    position: absolute;
+    transition: all .5s ease;
+    top: 40px;
+    transform: translateY(30px);
+    visibility: hidden;
+    line-height: 2rem;
+    width: 192px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 56%);
+}

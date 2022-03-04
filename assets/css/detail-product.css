@@ -1,0 +1,158 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    margin:  0 auto;
+    width: 1200px;
+}
+
+.detail-product {
+    display: flex;
+    margin-top: 50px;
+}
+
+.img-slider {
+    width: 50%;
+}
+.inf-product {
+    width: 50%;
+    margin-left: -50px;
+}
+
+.inf-product h1 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.inf-product ul {
+    list-style: disc;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.inf-product ul li {
+    margin-bottom: 15px;
+}
+
+.inf-product > span {
+    color: #D2232A;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.amount > span {
+    font-size: 16px;
+    color: #757575;
+}
+
+.amount > a {
+    border: 1px solid #757575;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #000;
+}
+
+.addcart {
+    color: #D2232A;
+    border: 1px solid #D2232A;
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.addcart > i {
+    margin-right: 5px;
+}
+
+.btn-buy {
+    background-color: #D2232A;
+    color: #fff;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.detail-content h2 {
+    position: relative;
+    color: #D2232A;
+    font-weight: 500;
+}
+
+.detail-content h2::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    bottom: -8px;
+    height: 2px;
+    background-color: #D2232A;
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.content h3 {
+    margin-bottom:15px;
+}
+
+.img-content {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.content p  {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 30px;
+}
+
+.product-involve {
+    margin-top: 40px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.clr {
+    clear: both;
+}
+
+.product-involve-items {
+    float: left;
+    /* margin-left: 50px; */
+}
+
+.product-accesory-item {
+    float: left;
+    width: 18%;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+.title__heading h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title__heading h2::before {
+    position: absolute;
+    content: '';
+    width: 74px;
+    height: 2px;
+    bottom: -6px;
+    background-color: #E11428;
+}

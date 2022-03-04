@@ -1,0 +1,95 @@
+{
+	"dashboard": {
+		"name": "Tổng quan",
+		"page":{
+			"dashboard": {
+				"name": "Tổng quan",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"account": {
+				"name": "Tài khoản cá nhân",
+				"permission": ["admin", "manager", "seller", "editor"]
+			}
+		}
+	},
+	"crm":{
+		"name":"Khách hàng",
+		"page":{
+			"customer": {
+				"name": "Danh sách",
+				"permission": ["admin", "manager", "seller"]
+			},
+			"order": {
+				"name": "Đơn hàng",
+				"permission": ["admin", "manager"]
+			},
+			"ticket": {
+				"name": "Hỗ trợ",
+				"permission": ["admin", "manager", "seller"]
+			},
+			"traffic": {
+				"name": "Truy cập",
+				"permission": ["admin", "manager", "seller"]
+			}
+		}
+	},
+	"commerce":{
+		"name":"Hàng hóa",
+		"page":{
+			"product": {
+				"name": "Sản phẩm",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"service": {
+				"name": "Dịch vụ",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"category": {
+				"name": "Danh mục",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"manufacturer": {
+				"name": "Thương hiệu",
+				"permission": ["admin", "manager", "seller", "editor"]
+			}
+		}
+	},
+	"content":{
+		"name":"Nội dung",
+		"page":{
+			"article": {
+				"name": "Bài viết",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"blog": {
+				"name": "Danh mục bài viết",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"banner": {
+				"name": "Quản lý Banner",
+				"permission": ["admin", "manager", "seller", "editor"]
+			},
+			"menu": {
+				"name": "Menu trang",
+				"permission": ["admin", "manager", "seller", "editor"]
+			}
+		}
+	},
+	"setting":{
+		"name":"Cài đặt chung",
+		"page":{
+			"setting": {
+				"name": "Thông tin Website",
+				"permission": ["admin"]
+			},
+			"script": {
+				"name": "Cài đặt mã Script",
+				"permission": ["admin"]
+			},
+			"staff": {
+				"name": "Vai trò trên trang",
+				"permission": ["admin"]
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+<?php if(!empty($_GET["id"])) { 
+$order = $this->model->user->getOrderDetail($_GET["id"]);
+$products = json_decode($order->product);
+?>
+<div class="user-content-block">
+	<div class="user-content-block-header">
+		<h2>Chi tiết chứng từ</h2>
+		<p>Chứng từ số: <?=$order->code?> - Ngày: <?=date('d/m/Y',$order->created)?> - Bảo hành đến: <?=date('d/m/Y',$order->expired)?></p>
+	</div>
+	<div class="mX">
+		<table>
+			<tr><th>Mã hàng</th><th>Tên hàng</th><th>ĐVT</th><th>Đơn giá</th><th>Số lượng</th><th>Thành tiền</th><th>Chiết khấu</th></tr>
+			<?php foreach($products as $item){?>
+			<tr>
+						<td align="center"><?=$item->sku?></td>
+						<td><?=$item->name?></td>
+						<td align="center"><?=$item->unit?></td>
+						<td align="center"><?=number_format($item->price)?></td>
+						<td align="center"><?=$item->quantity?></td>
+						<td align="center"><?=number_format($item->amount)?></td>
+						<td align="center"><?=number_format($item->discount)?></td>
+					</tr>
+			<?php } ?>
+			<tr><th colspan="5" align="right">Tổng cộng</th><th><?=number_format($order->price)?></th><th><?=number_format($order->discount)?></th></tr>
+			<tr><th colspan="5" align="right">Phí giao hàng</th><th colspan="2"><?=number_format($order->fee)?></th></tr>
+			<tr><th colspan="5" align="right">Tổng thanh toán</th><th colspan="2"><?=number_format($order->total)?></th></tr>
+			<tr><th colspan="5" align="right">Đã thanh toán</th><th colspan="2"><?=number_format($order->deposit)?></th></tr>
+			<tr><th colspan="5" align="right">Còn nợ lại</th><th colspan="2" style="color:#c00"><?=number_format($order->debt)?></th></tr>
+		</table>
+	</div>
+</div>
+<?php }else{
+$page = 1; if(!empty($_GET["p"])) $page = intval($_GET["p"]);
+$limit = 30;
+$total = null;
+$list = $this->model->user->getOrderList($this->user->code, $total, ($page-1), $limit);
+$pages = ceil($total/$limit);
+$debt = $this->model->user->countDebt($this->user->code)
+?>
+<div class="user-content-block">
+	<div class="user-content-block-header">
+		<h2>Lịch sử giao dịch</h2>
+		<p>Tổng dư nợ hiện tại của bạn là <?=number_format($debt)?></p>
+	</div>
+	<div class="mX">
+		<table>
+			<tr><th>Số C.từ</th><th>Ngày C.từ</th><th>Hạn B.hành</th><th>Tiền</th><th>C.khấu</th><th>Đã T.toán</th><th>Dư nợ</th></tr>
+			<?php foreach($list as $item){?>
+			<tr>
+				<td align="center"><a href="/user/order?id=<?=$item->id?>"><?=$item->code?></a></td>
+				<td align="center"><?=date('d/m/Y',$item->created)?></td>
+				<td align="center"><?=date('d/m/Y',$item->expired)?></td>
+				<td align="center"><?=number_format($item->price)?></td>
+				<td align="center"><?=number_format($item->discount)?></td>
+				<td align="center"><b><?=number_format($item->deposit)?></b></td>
+				<td align="center" style="color: #c00"><?=number_format($item->debt)?></td>
+				</tr>
+			<?php } ?>
+		</table>
+	</div>
+	<form id="frm-pagination" class="right">
+		<?php if ($total > 0) {
+					echo '<span>Tổng ' . number_format($total) . '</span>';
+					if ($page != 1) echo '<button type="submit" class="btn-pagina" name="p" value="1">|<</button>';
+					if ($page - 2 > 1) echo '<button type="submit" class="btn-pagina" name="p" value="' . ($page - 2) . '">' . ($page - 2) . '</button>';
+					if ($page - 1 > 1) echo '<button type="submit" class="btn-pagina" name="p" value="' . ($page - 1) . '">' . ($page - 1) . '</button>';
+					echo '<button type="button" class="btn-pagina active" name="p" value="' . $page . '">' . $page . '</button>';
+					if ($page + 1 < $pages) echo '<button type="submit" class="btn-pagina" name="p" value="' . ($page + 1) . '">' . ($page + 1) . '</button>';
+					if ($page + 2 < $pages) echo '<button type="submit" class="btn-pagina" name="p" value="' . ($page + 2) . '">' . ($page + 2) . '</button>';
+					if ($page != $pages) echo '<button type="submit" class="btn-pagina" name="p" value="' . $pages . '">>|</button>';
+				}
+				?>
+	</form>
+</div>
+<?php } ?>

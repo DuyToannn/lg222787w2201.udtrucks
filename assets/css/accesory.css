@@ -1,0 +1,158 @@
+.accesory-product {
+    margin-top: 60px;
+}
+
+.accesory-item {
+    display: flex;
+}
+
+.navi__left {
+    width: 18%;
+}
+
+.navi-item {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.navi-item h3 {
+    padding: 10px 15px;
+    background: rgba(210, 35, 42, 0.92);
+    border-radius: 5px 5px 0px 0px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.list-accesosry{
+    padding: 15px;
+}
+.list-accesosry li{margin-bottom: 15px;}
+.list-accesosry li a{
+    color: #333;
+    font-weight: 500;
+}
+
+.list-accesosry li a:hover {
+    color: #D2232A;
+}
+
+.news-widget {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.news-items {
+    padding: 15px;
+}
+
+.news-widget .img-news img {
+     width: 100%;
+}
+
+.img-news {
+    max-width: 60px;
+}
+
+.name-news h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+    line-height: 17px;
+    color: #333;
+}
+
+.name-news h4:hover {
+    color: #D2232A;
+}
+
+.name-news span {
+    color: #33333396;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.accesory__right {
+    width: 82%;
+}
+
+.accesory-filter {
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+    gap: 20px;
+}
+
+.accesory-filter span i {
+    font-size: 25px;
+}
+
+.accesory-filter ul {
+    display: flex;
+    gap: 20px;
+}
+.accesory-filter ul li{
+    padding: 10px;
+    text-align: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.accesory-filter ul li.active {
+    background-color: #DFDFDF;
+}
+
+.accesory-filter ul li.active a {
+    color: #D2232A;
+}
+.accesory-filter ul li a{
+    color: #000;
+}
+
+
+
+.img-item img {
+    width: 100%;
+}
+
+.product-accesory {
+    float: left;
+
+    margin-left: 50px;
+}
+
+.product-accesory-item {
+    float: left;
+    width: 22%;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+.name-product {
+    margin-top: 10px;
+}
+
+.name-product h4 {
+    font-weight: 500;
+    margin-bottom: 7px;
+    line-height: 20px;
+    color: #000;
+}
+
+.name-product h4:hover {
+    color: #D2232A;
+}
+
+.name-product span {
+    color: #333333A1;
+    font-size: 14px;
+}
+
+.name-product .price {
+    color: #D2232A;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+}
